@@ -1,28 +1,26 @@
 services:
-
   postgres:
     image: postgres:latest
     environment:
       POSTGRES_DB: ${POSTGRES_DATABASE}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      
-      
     ports:
       - 5432:5432
     volumes:
-      - postgres_data:/data/postgres
+      - postgres_data:/var/lib/postgresql/data
 
   keycloak:
-    image: quay.io/keycloak/keycloak:legacy
+    image: quay.io/keycloak/keycloak:25.0.2
+    command: ["start-dev"]
     environment:
       DB_VENDOR: POSTGRES
       DB_ADDR: postgres
       DB_DATABASE: ${POSTGRES_DATABASE}
       DB_USER: ${POSTGRES_USER}
       DB_PASSWORD: ${POSTGRES_PASSWORD}
-      KEYCLOAK_USER: ${KEYCLOAK_USER}
-      KEYCLOAK_PASSWORD: ${KEYCLOAK_PASSWORD}
+      KEYCLOAK_ADMIN: ${KEYCLOAK_USER}
+      KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_PASSWORD}
     ports:
       - "8180:8080"
     depends_on:
