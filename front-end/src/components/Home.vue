@@ -25,3 +25,37 @@ export default defineComponent({
   }
 })
 </script>
+<style scoped>
+div {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: #2e2e2e;
+}
+
+h1 {
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #b0b0b0;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #444;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #666;
+}
+</style>
