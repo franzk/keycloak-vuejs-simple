@@ -21,7 +21,6 @@ services:
       DB_PASSWORD: ${POSTGRES_PASSWORD}
       KEYCLOAK_ADMIN: ${KEYCLOAK_USER}
       KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_PASSWORD}
-      HOSTNAME_STRICT_HTTPS: false
     volumes:
       - ./:/opt/keycloak/data/import
     ports:
