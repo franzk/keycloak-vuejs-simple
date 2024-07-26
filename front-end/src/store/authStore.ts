@@ -14,7 +14,10 @@ export const useAuthStore = defineStore('auth', () => {
 
   const initKeycloak = async () => {
     try {
-      const authenticated = await keycloak.init({ onLoad: 'login-required' })
+      const authenticated = await keycloak.init({ 
+          onLoad: 'login-required',
+          checkLoginIframe: false 
+        })
       if (authenticated) {
         isAuthenticated.value = true
         token.value = keycloak.token || null // Ensure token is never undefined
