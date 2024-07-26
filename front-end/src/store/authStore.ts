@@ -1,4 +1,3 @@
-// src/stores/authStore.ts
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import Keycloak from 'keycloak-js'
