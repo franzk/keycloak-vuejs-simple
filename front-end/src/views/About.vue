@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h3>Welcome to the home page!</h3>
+    <h3>About Keycloak vuejs simple login</h3>
   </section>
 </template>
 
@@ -8,6 +8,6 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Home',
+  name: 'About',
 })
 </script>
