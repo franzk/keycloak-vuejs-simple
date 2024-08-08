@@ -11,7 +11,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   keycloak:
-    build: ./keycloak
+    build: ../keycloak
     command: ["start-dev", "--import-realm"]
     environment:
       DB_VENDOR: POSTGRES
@@ -22,7 +22,7 @@ services:
       KEYCLOAK_ADMIN: ${KEYCLOAK_USER}
       KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_PASSWORD}
     volumes:
-      - ./:/opt/keycloak/data/import
+      - ../keycloak/:/opt/keycloak/data/import
     ports:
       - "8180:8080"
     depends_on:
