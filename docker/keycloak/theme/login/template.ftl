@@ -52,6 +52,9 @@
 </head>
 
 <body class="${properties.kcBodyClass!}">
+<header class="login-title">
+    <h1>Keycloak vuejs simple login</h1>
+</header>
 <div class="${properties.kcLoginClass!}">
     <div class="${properties.kcFormCardClass!}">
         <header class="${properties.kcFormHeaderClass!}">
@@ -80,11 +83,11 @@
                         <span class="subtitle"><span class="required">*</span> ${msg("requiredFields")}</span>
                     </div>
                     <div class="col-md-10">
-                        <h1 id="kc-page-title"><#nested "header"></h1>
+                        <h2 id="kc-page-title"><#nested "header"></h2>
                     </div>
                 </div>
             <#else>
-                <h1 id="kc-page-title"><#nested "header"></h1>
+                <h2 id="kc-page-title"><#nested "header"></h2>
             </#if>
         <#else>
             <#if displayRequiredFields>

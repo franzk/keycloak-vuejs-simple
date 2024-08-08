@@ -23,7 +23,6 @@
 
                         </div>
                     </#if>
-                    <p>aa</p>
                     <div class="${properties.kcFormGroupClass!}">
                         <label for="password" class="${properties.kcLabelClass!}">${msg("password")}</label>
 
