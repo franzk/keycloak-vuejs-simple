@@ -11,7 +11,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   keycloak:
-    build: .
+    build: ./keycloak
     command: ["start-dev", "--import-realm"]
     environment:
       DB_VENDOR: POSTGRES
