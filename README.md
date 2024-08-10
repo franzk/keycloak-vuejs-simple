@@ -1,5 +1,8 @@
 # Keycloak vuejs simple login
 
+<img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D"> <img src="https://img.shields.io/badge/Keycloak-25.0.2-blue">
+<img src="https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white"> <img src="https://img.shields.io/badge/-DOCKER-2496ed?style=for-the-badge&logo=docker&logoColor=white">
+
 ## Installation
 
 ### 1. clone this repository
